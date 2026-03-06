@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+	/* Global Colors */
+	--text-color-light: #ffffff;
+	--text-color-dark: #000000;
+	--bg-color: #116051;
+	--primary-color: #f47d9a;
+	--secondary-color: #f3a64e;
+	--tertiary-color: #fff4e2;
+
+	/* General */
+	font-family: "Epilogue", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 1em;
+	line-height: 25px;
+	color: var(--text-color-light);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--bg-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	background-color: var(--bg-color);
+	max-width: 1250px;
+	padding: 0 75px;
+}
+
+/* Navigation */
+
+header {
+	background-color: var(--tertiary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	width: 100%;
+	padding: 0 25px;
+}
+
+header ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li {
+	margin: 0;
+	padding: 0;
+}
+
+#nav-logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-logo-container h3 {
+	padding-left: 10px;
+}
+
+.nav-link {
+	padding: 0 5px;
+}
+
+header *,
+.nav-link:link,
+.nav-link:visited {
+	color: var(--secondary-color);
+	font-weight: 700;
+	text-shadow: 1px 1px 1px lightgrey;
+}
+
+/* Headers */
+
+h1 {
+	font-size: 2.5em;
+	margin: 75px 0;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 40px 0;
+	color: var(--primary-color);
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+h1,
+h3 {
+	color: var(--secondary-color);
+}
+
+/* General */
+
+p {
+	font-weight: 400;
+	margin: 20px 0;
+}
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+	font-weight: 500;
+	color: var(--text-color-dark);
+}
+
+button {
+	padding: 7px 15px;
+	border-radius: 20px;
+	border: 0.5px solid black;
+	background-color: var(--primary-color);
+}
+
+button a,
+button a:link,
+button a:visited {
+	font-family: "Zalando Sans Expanded", sans-serif;
+	color: var(--text-color-light);
+	font-weight: 800;
+	font-style: italic;
+	text-shadow: 0.25px 0.25px 2px black;
+}
+
+img {
+	width: 50px;
+	height: auto;
+}
+
+li {
+	margin-left: 30px;
+	padding-left: 10px;
+}
+
+.info-header {
+	text-align: center;
+	font-size: 1.4em;
+	font-style: italic;
+	margin: 30px 0;
+	text-shadow: 0.25px 0.25px 2px black;
+}
+
+.info-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0 40px 0;
+}
+
+.info-container * {
+	color: var(--text-color-dark);
+}
+
+.info-sub-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 47%;
+	border-radius: 10px;
+	background-color: var(--tertiary-color);
+	padding: 5px 20px 20px 20px;
+}
+
+.info-sub-container p {
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+	background-color: var(--tertiary-color);
+}
+
+footer *:not(a) {
+	color: var(--text-color-dark);
+}
+
+footer a {
+	color: var(--secondary-color);
+}
+
+/* Home Styles */
+
+#home-header {
+	font-size: 3em;
+}
+
+#home-summary-container {
+	display: flex;
+	align-items: center;
+}
+
+#home-summary-container div {
+	width: 60%;
+}
+
+#image-self {
+	height: auto;
+	width: 250px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 0.75px solid rgb(46, 54, 73);
+	box-shadow: 3px 3px 5px rgb(46, 54, 73);
+}

@@ -9,51 +9,72 @@
 	<body>
 		<!-- Header -->
 		<header>
-			<img src="" alt="company logo" />
-			<h3>Rainbow Therapy & Consulting PLLC</h3>
+			<div id="nav-logo-container">
+				<img
+					src="./assets/raw/New Logo Transparent BG - Img Only.png"
+					alt="company logo" />
+				<h3>Rainbow Therapy & Consulting PLLC</h3>
+			</div>
 			<nav>
 				<ul>
 					<li>
-						<a href="./views/services.html">THERAPY SERVICES</a>
+						<a class="nav-link" href="./views/services.html">
+							THERAPY SERVICES
+						</a>
 					</li>
-					<li><a href="./views/about.html">ABOUT</a></li>
+					<span>|</span>
 					<li>
-						<a href="./views/consulting.html"> EDUCATION & CONSULTING </a>
+						<a class="nav-link" href="./views/about.html">ABOUT</a>
+					</li>
+					<span>|</span>
+					<li>
+						<a class="nav-link" href="./views/consulting.html">
+							EDUCATION & CONSULTING
+						</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<!-- Body -->
 		<main>
-			<h1>Bring color back into your life.</h1>
+			<h1 id="home-header">Bring color back into your life.</h1>
 			<section>
 				<h2>Hi, friend :)</h2>
-				<p>
-					My name is Britt (she/they), and I'm a queer, AuDHD, and Disabled
-					trauma therapist- as well as a dog mama to the world's sweetest husky,
-					an iced coffee aficionado, and avid video gaming nerd.
-				</p>
-				<p>
-					I specialize in treating individuals with complex and single-incident
-					trauma, self-esteem, and big existential questions around identity and
-					purpose. I largely serve folx whose trauma manifests other challenges,
-					like depression, anxiety, self-harm, suicidal thoughts, sexual
-					dysfunction, or substance use. I also assist families and partners who
-					have shared trauma experiences or who have trauma impacting
-					relationship dynamics.
-				</p>
-				<p>
-					Therapy is about healing, and you deserve a place to heal where you
-					can be affirmed, uplifted, and understood by someone who cheers you on
-					(like the rockstar you are).
-				</p>
-				<p>
-					No matter where you are in your therapy journey, prioritizing yourself
-					isn't always easy. I'm proud of you for being on this journey and look
-					forward to helping you be proud of you, too.
-				</p>
+				<div id="home-summary-container">
+					<div>
+						<p>
+							My name is Britt (she/they), and I'm a queer, AuDHD, and
+							Disabled trauma therapist- as well as a dog mama to the
+							world's sweetest husky, an iced coffee aficionado, and avid
+							video gaming nerd.
+						</p>
+						<p>
+							I specialize in treating individuals with complex and
+							single-incident trauma, self-esteem, and big existential
+							questions around identity and purpose. I largely serve folx
+							whose trauma manifests other challenges, like depression,
+							anxiety, self-harm, suicidal thoughts, sexual dysfunction, or
+							substance use. I also assist families and partners who have
+							shared trauma experiences or who have trauma impacting
+							relationship dynamics.
+						</p>
+						<p>
+							Therapy is about healing, and you deserve a place to heal
+							where you can be affirmed, uplifted, and understood by someone
+							who cheers you on (like the rockstar you are).
+						</p>
+						<p>
+							No matter where you are in your therapy journey, prioritizing
+							yourself isn't always easy. I'm proud of you for being on this
+							journey and look forward to helping you be proud of you, too.
+						</p>
+					</div>
+					<img
+						id="image-self"
+						src="./assets/raw/Headshot Pride Flag.jpg"
+						alt="picture of myself" />
+				</div>
 				<button><a href="">Learn more about me!</a></button>
-				<img src="" alt="picture of myself" />
 			</section>
 			<section>
 				<h2>Therapists deserve a soft place to land, too.</h2>
@@ -66,82 +87,106 @@
 					weren't taught in grad school- my goal is to help you get answers and
 					make your work easier.
 				</p>
-				<p>
+				<hr />
+				<p class="info-header">
 					Here are a few of the common topics that have people reaching out for
 					coaching:
 				</p>
-				<p>Client Services:</p>
-				<ul>
-					<li>
-						Reducing the harm of carceral systems in your mental health
-						practice.
-					</li>
-					<li>Navigating client intersectionality and systems with care.</li>
-					<li>
-						Participating in existential, relational, and narrative therapy
-						work for trauma.
-					</li>
-					<li>
-						Utilizing psychedelic-integrated, ketamine-assisted, and/or
-						psychedelic harm-reduction therapies for trauma.
-					</li>
-					<li>
-						Feedback on letter writing for accommodations, gender-affirming
-						care, and more.
-					</li>
-					<li>Neuro- and queer-affirming your clinical approach.</li>
-					<li>Modifying trauma informed care approaches for telehealth.</li>
-					<li>Showing up authentically as the colorful therapist you are!</li>
-				</ul>
-				<p>Being a Therapist:</p>
-				<ul>
-					<li>Balancing the weight of the world while holding space.</li>
-					<li>Enhancing practice policies for community care and equity.</li>
-					<li>
-						Transitioning to (or from) full telehealth operations in private
-						practice.
-					</li>
-					<li>
-						Tailoring your PsychologyToday, TherapyDen, etc. to reach
-						compatible clients.
-					</li>
-					<li>Developing or overhauling client paperwork for compliance.</li>
-					<li>Conceptualizing and implementing sliding scale systems.</li>
-					<li>
-						Switching from accepting insurance to out-of-network practice
-						without the guilt.
-					</li>
-				</ul>
-			</section>
-			<button><a href="">Book a free chemistry call!</a></button>
-			<!-- Footer -->
-			<footer>
-				<h2>Therapy for adults across Connecticut and Massachusetts</h2>
-				<h2>Virtual consultation for professionals nationwide</h2>
-				<div>
-					<div>
-						<p>Call: 1-203-275-9722</p>
-						<p>Email: <a href="">britt@rainbowtandc.com</a></p>
-						<p>268 Post Road, STE 200</p>
-						<p>Fairfield, CT, 06824 USA</p>
-						<a href="">
-							<img src="" alt="instagram image link" />
-						</a>
+				<div class="info-container">
+					<div class="info-sub-container">
+						<p>Client Services:</p>
+						<ul>
+							<li>
+								Reducing the harm of carceral systems in your mental
+								health practice.
+							</li>
+							<li>
+								Navigating client intersectionality and systems with care.
+							</li>
+							<li>
+								Participating in existential, relational, and narrative
+								therapy work for trauma.
+							</li>
+							<li>
+								Utilizing psychedelic-integrated, ketamine-assisted,
+								and/or psychedelic harm-reduction therapies for trauma.
+							</li>
+							<li>
+								Feedback on letter writing for accommodations,
+								gender-affirming care, and more.
+							</li>
+							<li>Neuro- and queer-affirming your clinical approach.</li>
+							<li>
+								Modifying trauma informed care approaches for telehealth.
+							</li>
+							<li>
+								Showing up authentically as the colorful therapist you
+								are!
+							</li>
+						</ul>
 					</div>
-					<div>
-						<img src="" alt="pride flag" />
-					</div>
-					<div>
-						<a href="">CONTACT</a>
-						<a href="">BOOK YOUR SESSION</a>
-						<a href="">TERMS OF USE</a>
-						<a href="">PRIVACY POLICY</a>
-						<a href="">LEGAL DISCLAIMER</a>
-						<a href="">NO SURPRISES ACT</a>
+					<div class="info-sub-container">
+						<p>Being a Therapist:</p>
+						<ul>
+							<li>
+								Balancing the weight of the world while holding space.
+							</li>
+							<li>
+								Enhancing practice policies for community care and equity.
+							</li>
+							<li>
+								Transitioning to (or from) full telehealth operations in
+								private practice.
+							</li>
+							<li>
+								Tailoring your PsychologyToday, TherapyDen, etc. to reach
+								compatible clients.
+							</li>
+							<li>
+								Developing or overhauling client paperwork for compliance.
+							</li>
+							<li>
+								Conceptualizing and implementing sliding scale systems.
+							</li>
+							<li>
+								Switching from accepting insurance to out-of-network
+								practice without the guilt.
+							</li>
+						</ul>
 					</div>
 				</div>
-			</footer>
+				<button>
+					<a href="">Book a free chemistry call!</a>
+				</button>
+			</section>
 		</main>
+		<!-- Footer -->
+		<footer>
+			<h2>Therapy for adults across Connecticut and Massachusetts</h2>
+			<h2>Virtual consultation for professionals nationwide</h2>
+			<div>
+				<div>
+					<p>Call: 1-203-275-9722</p>
+					<p>Email: <a href="">britt@rainbowtandc.com</a></p>
+					<p>268 Post Road, STE 200</p>
+					<p>Fairfield, CT, 06824 USA</p>
+					<a href="">
+						<img src="" alt="instagram image link" />
+					</a>
+				</div>
+				<div>
+					<img src="" alt="pride flag" />
+				</div>
+				<div>
+					<a href="">CONTACT</a>
+					<a href="">BOOK YOUR SESSION</a>
+					<a href="">TERMS OF USE</a>
+					<a href="">PRIVACY POLICY</a>
+					<a href="">LEGAL DISCLAIMER</a>
+					<a href="">NO SURPRISES ACT</a>
+				</div>
+			</div>
+		</footer>
 		<script src="./script.js"></script>
 	</body>
 </html>
