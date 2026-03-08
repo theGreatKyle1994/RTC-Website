@@ -34,6 +34,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: -1;
 }
 
 main {
@@ -79,8 +80,21 @@ header ul {
 }
 
 nav ul li {
+	cursor: pointer;
 	margin: 0;
 	padding: 0;
+	transition-property: transform text-shadow;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+nav ul li:hover {
+	transform: scale(1.05);
+}
+
+nav ul li:active {
+	transform: scale(0.97);
 }
 
 #nav-logo-container {
@@ -94,7 +108,7 @@ nav ul li {
 }
 
 .nav-link {
-	padding: 0 5px;
+	padding: 0 10px;
 }
 
 header *,
@@ -159,9 +173,13 @@ a:visited {
 
 button {
 	padding: 7px 15px;
+	cursor: pointer;
 	border-radius: 20px;
 	border: 0.5px solid black;
 	background-color: var(--primary-color);
+	transition-property: transform;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
 }
 
 button a,
@@ -172,6 +190,14 @@ button a:visited {
 	font-weight: 800;
 	font-style: italic;
 	text-shadow: 0.25px 0.25px 2px black;
+}
+
+button:hover {
+	transform: scale(1.05);
+}
+
+button:active {
+	transform: scale(0.97);
 }
 
 img {
@@ -237,6 +263,8 @@ footer {
 #footer-header-container {
 	display: grid;
 	grid-template-columns: 1.5fr 1.5fr;
+	border-bottom: 1px solid black;
+	margin-bottom: 40px;
 }
 
 #footer-header-container h2 {
@@ -290,7 +318,6 @@ footer a {
 
 #home-summary-container {
 	display: flex;
-	align-items: center;
 }
 
 #home-summary-container div {
