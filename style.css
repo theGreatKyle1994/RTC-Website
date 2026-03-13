@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
 
+:root {
+	interpolate-size: allow-keywords;
+}
+
 * {
 	/* Global Colors */
 	--text-color-light: rgba(255, 255, 255, 1);
-	--text-color-dark: rgba(0, 0, 0, 1);
-	--bg-color: rgba(17, 96, 81, 0.9);
+	--text-color-dark: rgb(49, 49, 49);
+	--bg-color: rgba(17, 96, 81, 1);
 	--primary-color: rgba(244, 125, 154, 1);
 	--secondary-color: rgba(243, 166, 78, 1);
 	--tertiary-color: rgba(255, 244, 226, 1);
@@ -13,7 +17,7 @@
 	font-family: "Epilogue", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 1.005em;
 	line-height: 25px;
 	color: var(--text-color-light);
 	box-sizing: border-box;
@@ -45,17 +49,40 @@ main {
 	z-index: -1;
 }
 
-#background-image {
+/* Background images */
+
+.background-image {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("./assets/raw/test/alexander-grey-h1RMkGPWMMo-unsplash.jpg");
 	background-position: center;
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	z-index: -999;
+}
+
+#bgi-home {
+	background-image:
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 70%, var(--bg-color)),
+		url("./assets/raw/bg/chameleon.jpg");
+	background-position: left;
+	background-size: contain;
+	background-repeat: space;
+}
+
+#bgi-services {
+	background-image: url("./assets/raw/bg/");
+}
+
+#bgi-about {
+	background-image: url("./assets/raw/bg/lgbt-dog.jpg");
+}
+
+#bgi-consulting {
+	background-image: url("./assets/raw/bg/");
 }
 
 /* Navigation */
@@ -83,7 +110,7 @@ nav ul li {
 	cursor: pointer;
 	margin: 0;
 	padding: 0;
-	transition-property: transform text-shadow;
+	transition-property: transform;
 	transition-duration: 0.1s;
 	transition-timing-function: ease-in-out;
 	background-color: rgba(255, 255, 255, 0);
@@ -116,7 +143,6 @@ header *,
 .nav-link:visited {
 	color: var(--secondary-color);
 	font-weight: 800;
-	text-shadow: 1px 1px 1px lightgrey;
 }
 
 #book-now-btn {
@@ -125,7 +151,6 @@ header *,
 	padding: 10px 15px;
 	margin-left: 5px;
 	border-radius: 10px;
-	text-shadow: 0.5px 0.5px 1px gray;
 	border: 1px 1px solid black;
 }
 
@@ -134,12 +159,14 @@ header *,
 h1 {
 	font-size: 2.5em;
 	margin: 50px 0;
+	text-shadow: 2px 2px 3px var(--text-color-dark);
 }
 
 h2 {
 	font-size: 1.8em;
 	margin: 40px 0;
 	color: var(--primary-color);
+	text-shadow: 1px 1px 1px black;
 }
 
 h3 {
@@ -151,17 +178,24 @@ h3 {
 	color: var(--secondary-color);
 }
 
-h1,
-h2 {
-	text-shadow: 0.5px 0.5px 2px black;
-}
-
 /* General */
 
 p {
 	font-weight: 400;
 	margin: 20px 0;
 }
+
+img {
+	width: 50px;
+	height: auto;
+}
+
+li {
+	margin-left: 30px;
+	padding-left: 10px;
+}
+
+/* Inputs */
 
 a,
 a:link,
@@ -178,7 +212,7 @@ a:visited {
 	display: inline-block;
 	background-color: var(--primary-color);
 	border: 0.5px solid black;
-	border-radius: 20px;
+	border-radius: 10px;
 	font-style: italic;
 	transition-property: transform;
 	transition-duration: 0.1s;
@@ -186,7 +220,6 @@ a:visited {
 	cursor: pointer;
 	font-family: "Zalando Sans Expanded", sans-serif;
 	font-weight: 800;
-	text-shadow: 0.5px 0.5px 2px black;
 	color: var(--text-color-light);
 }
 
@@ -198,48 +231,133 @@ a:visited {
 	transform: scale(0.97);
 }
 
-img {
-	width: 50px;
-	height: auto;
-}
-
-li {
-	margin-left: 30px;
-	padding-left: 10px;
-}
+/* Info Containers */
 
 .info-header {
 	text-align: center;
 	font-size: 1.4em;
 	font-style: italic;
 	margin: 30px 0;
-	text-shadow: 0.5px 0.5px 2px black;
 }
 
 .info-container {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin: 20px 0 40px 0;
-}
-
-.info-container * {
-	color: var(--text-color-dark);
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 .info-sub-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 47%;
+	height: 100%;
 	border-radius: 10px;
 	background-color: var(--tertiary-color);
-	padding: 5px 20px 20px 20px;
+	padding: 20px;
+}
+
+.info-sub-container * {
+	color: var(--text-color-dark);
+}
+
+.info-sub-container h3 {
+	font-size: 1.6em;
+	font-weight: 600;
+	text-align: center;
+	color: var(--secondary-color);
+	text-shadow: 1px 1px 1px lightgray;
+	border-bottom: 1px solid gray;
+	padding-bottom: 10px;
+	margin: 20px 0;
 }
 
 .info-sub-container p {
-	font-size: 1.3em;
+	text-align: center;
+}
+
+.info-sub-container p:nth-of-type(1) {
+	font-size: 1.1em;
 	font-weight: 600;
+}
+
+.info-sub-container > p:first-child {
+	color: var(--secondary-color);
+	text-shadow: 1px 1px 1px lightgray;
+}
+
+.info-sub-container:has(> p:first-child) {
+	display: grid;
+	align-items: center;
+}
+
+/* Dropdowns */
+
+details {
+	background-color: var(--tertiary-color);
+	border-bottom: 1px solid black;
+	padding: 20px 15px 15px 15px;
+}
+
+details *:not(summary) {
+	color: var(--text-color-dark);
+}
+
+details li {
+	padding: 5px 0;
+}
+
+details ul li:first-child {
+	padding-top: 20px;
+}
+
+[open]::details-content {
+	height: auto;
+}
+
+::details-content {
+	transition:
+		height 0.5s ease,
+		content-visibility 0.5s ease allow-discrete;
+	height: 0;
+	overflow: clip;
+}
+
+details summary {
+	cursor: pointer;
+	list-style-type: none;
+	font-size: 1.4em;
+	color: var(--secondary-color);
+	text-shadow: 1px 1px 1px lightgray;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+}
+
+details[open] summary::before {
+	content: "-";
+	width: 30px;
+	font-size: 1.4em;
+	font-weight: 800;
+}
+
+details:not([open]) summary::before {
+	content: "+";
+	width: 30px;
+	font-size: 1.4em;
+	font-weight: 800;
+}
+
+.dropdown-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.dropdown-container details:first-of-type {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.dropdown-container details:last-of-type {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 /* Footer */
@@ -261,7 +379,7 @@ footer {
 #footer-header-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid gray;
 	margin-bottom: 40px;
 }
 
@@ -308,7 +426,6 @@ footer a {
 	margin: 0;
 	color: var(--secondary-color);
 	font-weight: 600;
-	text-shadow: 0.5px 0.5px 1px gray;
 }
 
 /* Home Styles */
