@@ -17,7 +17,7 @@
 	font-family: "Epilogue", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-	font-size: 1.005em;
+	font-size: 1em;
 	line-height: 1.75;
 	color: var(--text-color-light);
 	box-sizing: border-box;
@@ -171,13 +171,13 @@ header *,
 
 h1 {
 	font-size: 2.5em;
-	margin: 50px 0;
+	margin: 40px 0;
 	text-shadow: 2px 2px 3px var(--text-color-dark);
 }
 
 h2 {
 	font-size: 1.8em;
-	margin: 40px 0;
+	margin: 20px 0;
 	color: var(--primary-color);
 	text-shadow: 1px 1px 1px black;
 }
@@ -264,8 +264,7 @@ a:visited {
 .summary-container,
 .summary-container-rev {
 	display: grid;
-	align-items: center;
-	gap: 100px;
+	gap: 25px;
 }
 
 .summary-container {
@@ -274,6 +273,11 @@ a:visited {
 
 .summary-container-rev {
 	grid-template-columns: 1fr 2fr;
+}
+
+.summary-container img,
+.summary-container-rev img {
+	margin: 20px 0;
 }
 
 /* Info Container */
@@ -286,9 +290,8 @@ a:visited {
 }
 
 .info-container {
-	margin-bottom: 20px;
 	display: grid;
-	gap: 20px;
+	gap: 25px;
 	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
@@ -338,7 +341,7 @@ a:visited {
 .dropdown-container,
 .dropdown-container-rev {
 	display: grid;
-	gap: 50px;
+	gap: 25px;
 }
 
 .dropdown-container {
@@ -363,7 +366,7 @@ a:visited {
 details {
 	background-color: var(--tertiary-color);
 	border-bottom: 1px solid black;
-	padding: 20px 15px 15px 15px;
+	padding: 10px;
 }
 
 details *:not(summary) {
@@ -398,12 +401,10 @@ details summary {
 	cursor: pointer;
 	list-style-type: none;
 	font-size: 1.4em;
-	height: 25px;
 	color: var(--secondary-color);
 	text-shadow: 1px 1px 1px lightgray;
 	font-weight: 600;
-	display: flex;
-	align-items: center;
+	min-height: 25px;
 }
 
 details[open] summary::before {
@@ -411,6 +412,7 @@ details[open] summary::before {
 	width: 30px;
 	font-size: 1.4em;
 	font-weight: 800;
+	margin-right: 5px;
 }
 
 details:not([open]) summary::before {
@@ -418,6 +420,7 @@ details:not([open]) summary::before {
 	width: 30px;
 	font-size: 1.4em;
 	font-weight: 800;
+	margin-right: 5px;
 }
 
 /* Footer */
@@ -429,11 +432,10 @@ footer {
 	background-color: var(--tertiary-color);
 	border-top: 1px solid var(--bg-color);
 	width: 100%;
-	padding: 20px 0;
 }
 
 #footer-container {
-	padding: 0 75px;
+	padding: 20px 75px;
 	width: 1500px;
 }
 
@@ -449,6 +451,11 @@ footer {
 	color: var(--primary-color);
 	text-align: center;
 	line-height: 30px;
+	padding: 0 20px;
+}
+
+#footer-header-container h2:first-child {
+	border-right: 1px solid gray;
 }
 
 .footer-bold-label {
@@ -474,7 +481,7 @@ footer a:active {
 
 #footer-contact-container {
 	display: grid;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
 #footer-contact-container * {
@@ -492,8 +499,13 @@ footer a:active {
 
 #footer-contact-middle {
 	align-self: center;
+}
+
+#footer-contact-middle img {
 	height: auto;
-	width: 200px;
+	max-width: 200px;
+	align-self: center;
+	justify-self: center;
 }
 
 #footer-contact-right {
@@ -528,4 +540,129 @@ footer a:active {
 
 #home-header {
 	font-size: 3em;
+}
+
+/* Mobile Media */
+
+/* Tablet */
+
+@media (width <= 1250px) {
+	/* General */
+
+	* {
+		hyphens: manual;
+		word-wrap: break-word;
+	}
+
+	main {
+		padding: 20px 35px;
+	}
+
+	h1 {
+		margin: 20px 0;
+	}
+
+	li {
+		margin-left: 20px;
+		padding-left: 5px;
+	}
+
+	p {
+		margin: 10px 0;
+	}
+
+	hr {
+	margin: 25px 0;
+}
+
+	/* Header */
+
+	* {
+		font-size: 0.98em;
+	}
+
+	header {
+		flex-direction: column;
+		justify-content: center;
+		height: 125px;
+	}
+
+	nav {
+		margin: 20px 0;
+	}
+
+	#nav-logo-container h3 {
+		font-size: 1.8em;
+	}
+
+	/* Info Container */
+
+	.info-container {
+		margin-bottom: 10px;
+		gap: 15px;
+	}
+
+	.info-sub-container {
+		padding: 10px;
+	}
+
+	.info-sub-container h3 {
+		margin: 10px 0;
+		padding-bottom: 5px;
+	}
+
+	.info-sub-container p:nth-of-type(1) {
+	font-size: 0.98em;
+	font-weight: 600;
+}
+
+	/* Summary Container */
+
+	.summary-container,
+	.summary-container-rev {
+		align-items: flex-start;
+		gap: 15px;
+	}
+
+	/* Dropdowns */
+	.dropdown-container,
+	.dropdown-container-rev {
+		gap: 15px;
+	}
+
+	.dropdown-container {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	.dropdown-container-rev {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	details {
+		padding: 10px;
+	}
+
+	/* Footer */
+	#footer-container {
+		padding: 10px 35px;
+	}
+
+	#footer-header-container h2 {
+		font-size: 1.5em;
+	}
+
+	/* Home Styles */
+
+	#home-header {
+		font-size: 2.5em;
+	}
+}
+
+/* Phones */
+
+@media (width <= 750px) {
+	/* Header */
+
+	header {
+	}
 }
