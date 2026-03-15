@@ -215,6 +215,14 @@ li {
 	padding-left: 10px;
 }
 
+.link-inline,
+.link-inline:link,
+.link-inline:visited {
+	text-decoration: underline;
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
 /* Inputs */
 
 a,
