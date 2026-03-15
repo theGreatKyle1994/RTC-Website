@@ -17,7 +17,7 @@
 	font-family: "Epilogue", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 0.98em;
 	line-height: 1.75;
 	color: var(--text-color-light);
 	box-sizing: border-box;
@@ -171,7 +171,7 @@ header *,
 
 h1 {
 	font-size: 2.5em;
-	margin: 40px 0;
+	margin: 20px 0;
 	text-shadow: 2px 2px 3px var(--text-color-dark);
 }
 
@@ -194,7 +194,7 @@ h3 {
 /* General */
 
 hr {
-	margin: 50px 0;
+	margin: 40px 0;
 }
 
 p {
@@ -211,7 +211,7 @@ img {
 }
 
 li {
-	margin-left: 30px;
+	margin-left: 20px;
 	padding-left: 10px;
 }
 
@@ -280,18 +280,29 @@ a:visited {
 	margin: 20px 0;
 }
 
+.summary-sub-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.summary-sub-container .btn-link {
+	width: fit-content;
+}
+
 /* Info Container */
 
 .info-header {
 	text-align: center;
 	font-size: 1.4em;
 	font-style: italic;
-	margin: 30px 0;
+	margin: 20px 0;
 }
 
 .info-container {
 	display: grid;
 	gap: 25px;
+	margin-bottom: 25px;
 	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
@@ -400,11 +411,11 @@ details li:first-child {
 details summary {
 	cursor: pointer;
 	list-style-type: none;
-	font-size: 1.4em;
+	font-size: 1.25em;
 	color: var(--secondary-color);
 	text-shadow: 1px 1px 1px lightgray;
 	font-weight: 600;
-	min-height: 25px;
+	min-height: 20px;
 }
 
 details[open] summary::before {
@@ -443,11 +454,11 @@ footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	border-bottom: 1px solid gray;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 #footer-header-container h2 {
-	margin: 30px 0;
+	margin: 20px 0;
 	color: var(--primary-color);
 	text-align: center;
 	line-height: 30px;
@@ -572,8 +583,8 @@ footer a:active {
 	}
 
 	hr {
-	margin: 25px 0;
-}
+		margin: 20px 0;
+	}
 
 	/* Header */
 
@@ -598,7 +609,7 @@ footer a:active {
 	/* Info Container */
 
 	.info-container {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		gap: 15px;
 	}
 
@@ -612,9 +623,9 @@ footer a:active {
 	}
 
 	.info-sub-container p:nth-of-type(1) {
-	font-size: 0.98em;
-	font-weight: 600;
-}
+		font-size: 0.98em;
+		font-weight: 600;
+	}
 
 	/* Summary Container */
 
