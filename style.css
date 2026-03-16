@@ -32,6 +32,7 @@ body {
 }
 
 body {
+	background-color: var(--bg-color);
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
@@ -45,6 +46,11 @@ main {
 	box-shadow: 0px 0px 15px black;
 	max-width: 1500px;
 	padding: 40px 75px;
+	animation-name: loadOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
 	z-index: -1;
 }
 
@@ -62,6 +68,11 @@ main {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	z-index: -999;
+	animation-name: loadOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
 }
 
 #bgi-home {
@@ -88,6 +99,18 @@ main {
 		url("./assets/raw/bg/rocky-beach.jpg");
 }
 
+/* Animations */
+
+@keyframes loadOpacity {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 /* Navigation */
 
 header {
@@ -106,6 +129,7 @@ header {
 header ul {
 	list-style: none;
 	display: flex;
+	line-height: 0;
 }
 
 nav {
