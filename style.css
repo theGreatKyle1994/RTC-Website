@@ -252,7 +252,8 @@ li {
 #banner-container {
 	display: flex;
 	justify-content: space-evenly;
-	height: 125px;
+	align-items: center;
+	flex-wrap: wrap;
 	margin: 10px 0;
 	background-color: var(--tertiary-color);
 	border: 1px solid black;
@@ -261,7 +262,9 @@ li {
 }
 
 #banner-container img {
-	height: 100%;
+	vertical-align: middle;
+	margin: 0 5px;
+	height: 75px;
 	width: auto;
 	border: none;
 	box-shadow: none;
@@ -623,8 +626,8 @@ footer a:active {
 
 	/* Banner */
 
-	#banner-container {
-		height: 100px;
+	#banner-container img {
+		height: 60px;
 	}
 
 	/* Header */
@@ -858,12 +861,6 @@ footer a:active {
 	p,
 	li {
 		font-size: 1.25em;
-	}
-
-	/* Banner */
-
-	#banner-container {
-		height: 75px;
 	}
 
 	/* Header */
