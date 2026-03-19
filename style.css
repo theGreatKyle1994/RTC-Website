@@ -25,6 +25,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	min-height: 100vh;
@@ -97,6 +101,12 @@ main {
 	background-image:
 		linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 70%, var(--bg-color)),
 		url("./assets/raw/bg/rocky-beach.jpg");
+}
+
+#bgi-legal {
+	background-image:
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 70%, var(--bg-color)),
+		url("./assets/raw/bg/backyard.jpg");
 }
 
 /* Animations */
