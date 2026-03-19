@@ -492,6 +492,25 @@ details:not([open]) summary::before {
 	margin-right: 5px;
 }
 
+/* Link Container */
+
+.link-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 1;
+}
+
+.link-container a {
+	margin: 10px;
+	width: 100%;
+}
+
+.link-container img {
+	vertical-align: middle;
+}
+
 /* Footer */
 
 footer {
@@ -788,6 +807,12 @@ footer a:active {
 
 	.nav-link {
 		padding: 0 5px;
+	}
+
+	/* Link Container */
+
+	.link-container {
+		flex-direction: column;
 	}
 
 	/* Summary Container */
